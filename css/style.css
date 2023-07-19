@@ -65,22 +65,39 @@ header {
     height: 100vh;
     word-wrap: 100%;
     padding: 2% 6%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../img/banner.png);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../img/video.mp4);
     background-size: cover;
     background-position: center;
     position: relative;
+    background-attachment: fixed;
 }
+
+header{
+    position: relative;
+}
+
 
 header nav{
     display: flex;
     justify-content: space-between;
 }
 
+#myVideo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
 header label,header input{
     display: none;
 }
 header nav .logo a img {
+    position: absolute;
     width: 150px;
+    z-index: 1;
 }
 
 header nav ul {
@@ -104,8 +121,13 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    color: #ffff;
+    color: #ad584c;
     font-size: 0.722rem;
+    font-weight: 700;
+}
+
+header nav ul li a:hover{
+    color: #d49991 ;
 }
 
 header nav ul li::after{
@@ -113,7 +135,7 @@ header nav ul li::after{
     width: 0%;
     height: 2px;
     display: block;
-    background-color: #f44336;
+    background-color: #ad584c;
     margin: auto;
     transition: all 0.3s ease;
 }
@@ -123,33 +145,51 @@ header nav ul li:hover::after{
 }
 
 header .title{
-    width: 90%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    color: #ffff;
+    
+   
+   
 }
 
+.title h1{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 90%;
+    color: #b95042;
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+}
+
+.title h3{
+    color: #fff3f3;
+}
 header .title a{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    color: #ad584c;
+    transform: translate(-50%,-50%);
+    text-align: center;
     display: inline-block;
-    border: 1px solid #ffff;
+    border: 3px solid #ffff;
     padding: 0.5rem 1rem;
     text-decoration: none;
     color: #ffff;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 1rem;
     transition: all 0.3s ease;
 }
 
 header .title a:hover{
-    background-color: #f44336;
-    border-color: #f44336;
+    background-color: #b95042;
+    border-color: #b95042;
 }
 
 /* Courses */
 
 #course-section{
+    margin-top: 4rem;
     width: 80%;
     margin: auto;
     text-align: center;
@@ -266,7 +306,7 @@ header .title a:hover{
     width: 80%;
     margin: auto;
     text-align: center;
-    padding: 3rem 0;
+    padding-top: 3rem;
 }
 
 #facilities .holder{
@@ -307,7 +347,7 @@ header .title a:hover{
     width: 80%;
     margin: auto;
     text-align: center;
-    padding: 3rem 0;
+    padding-top: 3rem;
 }
 
 #testo .holder{
@@ -315,6 +355,7 @@ header .title a:hover{
     justify-content: center;
     align-items: center;
     gap: 1.3rem;
+    padding: 1rem;
 }
 
 
@@ -325,6 +366,7 @@ header .title a:hover{
     background-color: #fff3f3;
     padding: 1.5rem;
     transition: all 0.3s ease;
+    margin-bottom: 2.3rem;
 }
 
 #testo .holder .card:hover{
@@ -849,4 +891,9 @@ header#sub{
     #contact .right{
         width: 100%;
     }
+}
+
+
+.swiper .cont{
+    padding: 1rem;
 }
